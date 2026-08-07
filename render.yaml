@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-classroom-scheduler-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    rootDir: backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
